@@ -14,8 +14,8 @@ El importador reproducible es `scripts/reconstruir_librero_pared.py` y genera `s
 
 - Laterales: altura = X XML; profundidad = Y local de cada mitad. En escena, profundidad mundial = `150 - Y`.
 - Frente: perfil ranurado al frente, centro Z = 140,75 mm. Su eje vertical se invierte para alinear los agujeros de canto con el lateral.
-- Base: centro Y según la estación; profundidad mundial = `131,5 - Y local`; ocupa Z 0–131,5 mm y toca la cara posterior del frente.
-- Fondo: contra la pared, centro Z = 9,25 mm.
+- Base: centro Y según la estación; profundidad mundial = `131,5 - Y local`; ocupa Z 0–131,5 mm, toca la cara posterior del frente y presenta los mecanizados de cara hacia abajo.
+- Fondo: contra la pared, centro Z = 9,25 mm, con los mecanizados mirando hacia el interior del librero.
 
 ## Coincidencias verificadas
 

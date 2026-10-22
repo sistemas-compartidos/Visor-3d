@@ -106,13 +106,15 @@ function startViewer() {
   const id = (x, y) => [x, y];
   for (let i=0; i<3; i++) {
     const base = addPart("base", "base", [0, data.assembly.baseCentersY[i], 65.75], [Math.PI/2, 0, 0], [0, (i-1)*90, 85], (x,y) => [x, 131.5-y]);
-    flatMarks(base, "base", data.pieces.base, (x,y) => [x, 131.5-y], -1);
+    // Las perforaciones de cara de la base/estante se realizan desde abajo.
+    flatMarks(base, "base", data.pieces.base, (x,y) => [x, 131.5-y], 1);
     const frontCenter = data.assembly.frontBottomY[i]+50;
     const front = addPart("frente", "frente", [0, frontCenter, 140.75], [0, 0, 0], [0, (i-1)*75, 190], (x,y) => [x, 100-y]);
     flatMarks(front, "frente", data.pieces.frente, (x,y) => [x, 100-y], 1);
     const backCenter = data.assembly.backBottomY[i]+40;
     const back = addPart("fondo", "fondo", [0, backCenter, 9.25], [0, 0, 0], [0, (i-1)*70, -170]);
-    flatMarks(back, "fondo", data.pieces[`fondo-${i+1}`], id, -1);
+    // La cara mecanizada del fondo mira hacia el interior del librero.
+    flatMarks(back, "fondo", data.pieces[`fondo-${i+1}`], id, 1);
   }
 
   const ground = new THREE.Mesh(new THREE.PlaneGeometry(20, 19), new THREE.MeshStandardMaterial({ color: VIEWER_COLORS.floor, roughness: 1 }));
