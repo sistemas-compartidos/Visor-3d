@@ -110,7 +110,8 @@ function startViewer() {
     flatMarks(base, "base", data.pieces.base, (x,y) => [x, 131.5-y], 1);
     const frontCenter = data.assembly.frontBottomY[i]+50;
     const front = addPart("frente", "frente", [0, frontCenter, 140.75], [0, 0, 0], [0, (i-1)*75, 190], (x,y) => [x, 100-y]);
-    flatMarks(front, "frente", data.pieces.frente, (x,y) => [x, 100-y], 1);
+    // La cara mecanizada del frente mira hacia el interior del librero.
+    flatMarks(front, "frente", data.pieces.frente, (x,y) => [x, 100-y], -1);
     const backCenter = data.assembly.backBottomY[i]+40;
     const back = addPart("fondo", "fondo", [0, backCenter, 9.25], [0, 0, 0], [0, (i-1)*70, -170]);
     // La cara mecanizada del fondo mira hacia el interior del librero.
@@ -121,7 +122,7 @@ function startViewer() {
   ground.rotation.x = -Math.PI/2; ground.receiveShadow = true; scene.add(ground);
   let active = route.get("pieza") || "lateral", amount = 0; if (!pieces[active]) active = "lateral"; select.value = active;
   function refresh() { for (const item of parts) item.mesh.material = item.type === active ? selected : wood;
-    for (const m of markers) m.visible = amount > .001 && (m.userData.partType === active || amount > .72); }
+    for (const m of markers) m.visible = amount > .001; }
   function explode(value) { amount = value; const eased = 1-Math.pow(1-value, 2);
     for (const { group } of parts) group.position.copy(group.userData.base).addScaledVector(group.userData.explode, eased); refresh(); }
   select.onchange = () => { active = select.value; refresh(); const url = new URL(location.href);
