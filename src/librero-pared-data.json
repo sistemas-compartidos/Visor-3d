@@ -1,0 +1,1689 @@
+{
+  "product": "Librero Pared Emi",
+  "code": "MA0009040006",
+  "thickness": 18.5,
+  "profiles": {
+    "lateral": {
+      "outline": [
+        [
+          0.0,
+          20.0
+        ],
+        [
+          0.032,
+          18.867
+        ],
+        [
+          0.128,
+          17.743
+        ],
+        [
+          0.286,
+          16.631
+        ],
+        [
+          0.505,
+          15.533
+        ],
+        [
+          0.785,
+          14.451
+        ],
+        [
+          1.125,
+          13.388
+        ],
+        [
+          1.522,
+          12.346
+        ],
+        [
+          1.978,
+          11.328
+        ],
+        [
+          2.489,
+          10.337
+        ],
+        [
+          3.056,
+          9.374
+        ],
+        [
+          3.678,
+          8.442
+        ],
+        [
+          4.352,
+          7.544
+        ],
+        [
+          5.079,
+          6.682
+        ],
+        [
+          5.858,
+          5.858
+        ],
+        [
+          6.682,
+          5.079
+        ],
+        [
+          7.544,
+          4.352
+        ],
+        [
+          8.442,
+          3.678
+        ],
+        [
+          9.374,
+          3.056
+        ],
+        [
+          10.337,
+          2.489
+        ],
+        [
+          11.328,
+          1.978
+        ],
+        [
+          12.346,
+          1.522
+        ],
+        [
+          13.388,
+          1.125
+        ],
+        [
+          14.451,
+          0.785
+        ],
+        [
+          15.533,
+          0.505
+        ],
+        [
+          16.631,
+          0.286
+        ],
+        [
+          17.743,
+          0.128
+        ],
+        [
+          18.867,
+          0.032
+        ],
+        [
+          20.0,
+          0.0
+        ],
+        [
+          150.0,
+          0.0
+        ],
+        [
+          150.0,
+          1200.0
+        ],
+        [
+          20.0,
+          1200.0
+        ],
+        [
+          18.867,
+          1199.968
+        ],
+        [
+          17.743,
+          1199.872
+        ],
+        [
+          16.631,
+          1199.714
+        ],
+        [
+          15.533,
+          1199.495
+        ],
+        [
+          14.451,
+          1199.215
+        ],
+        [
+          13.388,
+          1198.875
+        ],
+        [
+          12.346,
+          1198.478
+        ],
+        [
+          11.328,
+          1198.022
+        ],
+        [
+          10.337,
+          1197.511
+        ],
+        [
+          9.374,
+          1196.944
+        ],
+        [
+          8.442,
+          1196.322
+        ],
+        [
+          7.544,
+          1195.648
+        ],
+        [
+          6.682,
+          1194.921
+        ],
+        [
+          5.858,
+          1194.142
+        ],
+        [
+          5.079,
+          1193.318
+        ],
+        [
+          4.352,
+          1192.456
+        ],
+        [
+          3.678,
+          1191.558
+        ],
+        [
+          3.056,
+          1190.626
+        ],
+        [
+          2.489,
+          1189.663
+        ],
+        [
+          1.978,
+          1188.672
+        ],
+        [
+          1.522,
+          1187.654
+        ],
+        [
+          1.125,
+          1186.612
+        ],
+        [
+          0.785,
+          1185.549
+        ],
+        [
+          0.505,
+          1184.467
+        ],
+        [
+          0.286,
+          1183.369
+        ],
+        [
+          0.128,
+          1182.257
+        ],
+        [
+          0.032,
+          1181.133
+        ],
+        [
+          0.0,
+          1180.0
+        ]
+      ],
+      "width": 150.0,
+      "height": 1200.0
+    },
+    "frente": {
+      "outline": [
+        [
+          564.0,
+          0.0
+        ],
+        [
+          564.0,
+          100.0
+        ],
+        [
+          0.0,
+          100.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "holes": [
+        [
+          [
+            532.0,
+            25.0
+          ],
+          [
+            532.0,
+            75.0
+          ],
+          [
+            32.0,
+            75.0
+          ],
+          [
+            32.0,
+            25.0
+          ]
+        ]
+      ],
+      "width": 564.0,
+      "height": 100.0
+    },
+    "base": {
+      "outline": [
+        [
+          564.0,
+          131.5
+        ],
+        [
+          0.0,
+          131.5
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          564.0,
+          0.0
+        ]
+      ],
+      "width": 564.0,
+      "height": 131.5
+    },
+    "fondo": {
+      "outline": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          564.0,
+          0.0
+        ],
+        [
+          564.0,
+          80.0
+        ],
+        [
+          0.0,
+          80.0
+        ]
+      ],
+      "width": 564.0,
+      "height": 80.0
+    }
+  },
+  "programs": {
+    "MA000904000601180101.xml": {
+      "length": 1200.0,
+      "width": 304.4,
+      "thickness": 18.5,
+      "operations": [
+        {
+          "type": "Vertical Hole",
+          "x": 71.75,
+          "y": 9.25,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 103.75,
+          "y": 9.25,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 71.75,
+          "y": 295.15,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 103.75,
+          "y": 295.15,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 47.75,
+          "y": 53.0,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 47.75,
+          "y": 117.0,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 47.75,
+          "y": 251.4,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 47.75,
+          "y": 187.4,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 495.25,
+          "y": 9.25,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 527.25,
+          "y": 9.25,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 495.25,
+          "y": 295.15,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 527.25,
+          "y": 295.15,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 471.25,
+          "y": 53.0,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 471.25,
+          "y": 117.0,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 471.25,
+          "y": 251.4,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 471.25,
+          "y": 187.4,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 918.75,
+          "y": 9.25,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 950.75,
+          "y": 9.25,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 918.75,
+          "y": 295.15,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 950.75,
+          "y": 295.15,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 894.75,
+          "y": 53.0,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 894.75,
+          "y": 117.0,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 894.75,
+          "y": 251.4,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 894.75,
+          "y": 187.4,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 406.0,
+          "y": 140.75,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 438.0,
+          "y": 140.75,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 406.0,
+          "y": 163.65,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 438.0,
+          "y": 163.65,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 829.5,
+          "y": 140.75,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 861.5,
+          "y": 140.75,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 829.5,
+          "y": 163.65,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 861.5,
+          "y": 163.65,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 1144.0,
+          "y": 140.75,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 1176.0,
+          "y": 140.75,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 1144.0,
+          "y": 163.65,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 1176.0,
+          "y": 163.65,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        }
+      ]
+    },
+    "MA000904000602180101.xml": {
+      "length": 564.0,
+      "width": 235.9,
+      "thickness": 18.5,
+      "operations": [
+        {
+          "type": "Horizontal Hole",
+          "x": 461.5,
+          "y": 235.9,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "3"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 102.5,
+          "y": 235.9,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "3"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 564.0,
+          "y": 65.25,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "1"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 564.0,
+          "y": 33.25,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "1"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 0.0,
+          "y": 65.25,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "2"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 0.0,
+          "y": 33.25,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "2"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 564.0,
+          "y": 201.4,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "1"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 0.0,
+          "y": 201.4,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "2"
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 530.0,
+          "y": 137.4,
+          "z": null,
+          "diameter": 15.0,
+          "depth": 13.3,
+          "quadrant": null
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 564.0,
+          "y": 137.4,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 30.0,
+          "quadrant": "1"
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 34.0,
+          "y": 137.4,
+          "z": null,
+          "diameter": 15.0,
+          "depth": 13.3,
+          "quadrant": null
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 0.0,
+          "y": 137.4,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 30.0,
+          "quadrant": "2"
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 461.5,
+          "y": 90.75,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 102.5,
+          "y": 90.75,
+          "z": null,
+          "diameter": 8.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 282.0,
+          "y": 90.75,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 11.0,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 282.0,
+          "y": 201.9,
+          "z": null,
+          "diameter": 15.0,
+          "depth": 13.3,
+          "quadrant": null
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 282.0,
+          "y": 235.9,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 30.0,
+          "quadrant": "3"
+        }
+      ]
+    },
+    "MA000904000603180101.xml": {
+      "length": 564.0,
+      "width": 248.8,
+      "thickness": 18.5,
+      "operations": [
+        {
+          "type": "Horizontal Hole",
+          "x": 0.0,
+          "y": 24.0,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "2"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 0.0,
+          "y": 56.0,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "2"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 564.0,
+          "y": 24.0,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "1"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 564.0,
+          "y": 56.0,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "1"
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 102.5,
+          "y": 40.0,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 19.5,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 461.5,
+          "y": 40.0,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 19.5,
+          "quadrant": null
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 0.0,
+          "y": 224.8,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "2"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 0.0,
+          "y": 192.8,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "2"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 564.0,
+          "y": 224.8,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "1"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 564.0,
+          "y": 192.8,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "1"
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 102.5,
+          "y": 208.8,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 19.5,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 461.5,
+          "y": 208.8,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 19.5,
+          "quadrant": null
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 0.0,
+          "y": 108.4,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "2"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 0.0,
+          "y": 140.4,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "2"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 564.0,
+          "y": 108.4,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "1"
+        },
+        {
+          "type": "Horizontal Hole",
+          "x": 564.0,
+          "y": 140.4,
+          "z": 9.25,
+          "diameter": 8.0,
+          "depth": 22.0,
+          "quadrant": "1"
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 102.5,
+          "y": 124.4,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 19.5,
+          "quadrant": null
+        },
+        {
+          "type": "Vertical Hole",
+          "x": 461.5,
+          "y": 124.4,
+          "z": null,
+          "diameter": 5.0,
+          "depth": 19.5,
+          "quadrant": null
+        }
+      ]
+    }
+  },
+  "pieces": {
+    "lateral-izquierdo": [
+      {
+        "type": "Vertical Hole",
+        "x": 71.75,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 103.75,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 47.75,
+        "y": 53.0,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 47.75,
+        "y": 117.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 495.25,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 527.25,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 471.25,
+        "y": 53.0,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 471.25,
+        "y": 117.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 918.75,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 950.75,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 894.75,
+        "y": 53.0,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 894.75,
+        "y": 117.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 406.0,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 438.0,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 829.5,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 861.5,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 1144.0,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 1176.0,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      }
+    ],
+    "lateral-derecho": [
+      {
+        "type": "Vertical Hole",
+        "x": 71.75,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 103.75,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 47.75,
+        "y": 97.0,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 47.75,
+        "y": 33.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 495.25,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 527.25,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 471.25,
+        "y": 97.0,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 471.25,
+        "y": 33.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 918.75,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 950.75,
+        "y": 140.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 894.75,
+        "y": 97.0,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 894.75,
+        "y": 33.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 406.0,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 438.0,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 829.5,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 861.5,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 1144.0,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 1176.0,
+        "y": 9.25,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      }
+    ],
+    "frente": [
+      {
+        "type": "Horizontal Hole",
+        "x": 564.0,
+        "y": 65.25,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "1"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 564.0,
+        "y": 33.25,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "1"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 0.0,
+        "y": 65.25,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "2"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 0.0,
+        "y": 33.25,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "2"
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 461.5,
+        "y": 90.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 102.5,
+        "y": 90.75,
+        "z": null,
+        "diameter": 8.0,
+        "depth": 11.0,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 282.0,
+        "y": 90.75,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 11.0,
+        "quadrant": null
+      }
+    ],
+    "base": [
+      {
+        "type": "Horizontal Hole",
+        "x": 461.5,
+        "y": 131.5,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "3"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 102.5,
+        "y": 131.5,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "3"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 564.0,
+        "y": 97.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "1"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 0.0,
+        "y": 97.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "2"
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 530.0,
+        "y": 33.0,
+        "z": null,
+        "diameter": 15.0,
+        "depth": 13.3,
+        "quadrant": null
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 564.0,
+        "y": 33.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 30.0,
+        "quadrant": "1"
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 34.0,
+        "y": 33.0,
+        "z": null,
+        "diameter": 15.0,
+        "depth": 13.3,
+        "quadrant": null
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 0.0,
+        "y": 33.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 30.0,
+        "quadrant": "2"
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 282.0,
+        "y": 97.5,
+        "z": null,
+        "diameter": 15.0,
+        "depth": 13.3,
+        "quadrant": null
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 282.0,
+        "y": 131.5,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 30.0,
+        "quadrant": "3"
+      }
+    ],
+    "fondo-1": [
+      {
+        "type": "Horizontal Hole",
+        "x": 0.0,
+        "y": 24.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "2"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 0.0,
+        "y": 56.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "2"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 564.0,
+        "y": 24.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "1"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 564.0,
+        "y": 56.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "1"
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 102.5,
+        "y": 40.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 19.5,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 461.5,
+        "y": 40.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 19.5,
+        "quadrant": null
+      }
+    ],
+    "fondo-2": [
+      {
+        "type": "Horizontal Hole",
+        "x": 0.0,
+        "y": 24.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "2"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 0.0,
+        "y": 56.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "2"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 564.0,
+        "y": 24.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "1"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 564.0,
+        "y": 56.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "1"
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 102.5,
+        "y": 40.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 19.5,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 461.5,
+        "y": 40.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 19.5,
+        "quadrant": null
+      }
+    ],
+    "fondo-3": [
+      {
+        "type": "Horizontal Hole",
+        "x": 0.0,
+        "y": 56.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "2"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 0.0,
+        "y": 24.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "2"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 564.0,
+        "y": 56.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "1"
+      },
+      {
+        "type": "Horizontal Hole",
+        "x": 564.0,
+        "y": 24.0,
+        "z": 9.25,
+        "diameter": 8.0,
+        "depth": 22.0,
+        "quadrant": "1"
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 102.5,
+        "y": 40.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 19.5,
+        "quadrant": null
+      },
+      {
+        "type": "Vertical Hole",
+        "x": 461.5,
+        "y": 40.0,
+        "z": null,
+        "diameter": 5.0,
+        "depth": 19.5,
+        "quadrant": null
+      }
+    ]
+  },
+  "assembly": {
+    "baseCentersY": [
+      47.75,
+      471.25,
+      894.75
+    ],
+    "frontBottomY": [
+      38.5,
+      462.0,
+      885.5
+    ],
+    "backBottomY": [
+      382.0,
+      805.5,
+      1120.0
+    ],
+    "insideWidth": 564.0,
+    "outsideWidth": 601.0,
+    "depth": 150.0
+  },
+  "registration": {
+    "lateral": "alto local = XML X; profundidad local = XML Y de cada mitad",
+    "frontBase": "frente Y 0..100; base Y 104.4..235.9; base invertida en profundidad al montar",
+    "backs": "tres bandas de 80 mm en Y 0..80, 84.4..164.4 y 168.8..248.8",
+    "dxf": "los círculos DXF usan X con signo opuesto a los contornos"
+  },
+  "source": [
+    "G:\\Mi unidad\\Produccion\\Maquinas\\Pantografo\\Hermes 28\\Prod a Medida\\Victoria Bongiovanni\\Librero Pared\\Librero Pared.art",
+    "G:\\Mi unidad\\Produccion\\Maquinas\\Pantografo\\Hermes 28\\Prod a Medida\\Victoria Bongiovanni\\Librero Pared\\Librero pared.dxf",
+    "G:\\Mi unidad\\Produccion\\Maquinas\\Flex\\Archivos Corte\\A Medida\\Bongiovanni\\MA0009040006 Librero Pared\\MA000904000601180101.xml",
+    "G:\\Mi unidad\\Produccion\\Maquinas\\Flex\\Archivos Corte\\A Medida\\Bongiovanni\\MA0009040006 Librero Pared\\MA000904000602180101.xml",
+    "G:\\Mi unidad\\Produccion\\Maquinas\\Flex\\Archivos Corte\\A Medida\\Bongiovanni\\MA0009040006 Librero Pared\\MA000904000603180101.xml"
+  ]
+}

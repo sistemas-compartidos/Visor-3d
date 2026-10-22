@@ -10,6 +10,7 @@ export const catalog = {
       "juguetero-bajo-x2-emi": { name: "Juguetero Bajo x2 Emi", description: "Juguetero bajo de dos compartimentos", status: "Borrador", title: "Juguetero Bajo x2 Emi" },
       "juguetero-alto": { name: "Juguetero Alto Emi", description: "Juguetero alto con cuatro estantes", status: "Disponible", title: "Juguetero Alto Emi" },
       "juguetero-x2-con-estante": { name: "Juguetero x2 con Estante", description: "Dos compartimentos y estante superior", status: "Borrador", title: "Juguetero x2 con Estante" },
+      "librero-pared-emi": { name: "Librero Pared Emi", description: "Librero infantil de pared con tres niveles", status: "Borrador", title: "Librero Pared Emi" },
       "baul-emi": { name: "Baúl Emi", description: "Baúl infantil con tapa rebatible", status: "Disponible", title: "Baúl Emi" }
     }
   }
