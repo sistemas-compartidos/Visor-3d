@@ -101,8 +101,10 @@ function startViewer() {
 
   const sideX = (564+T)/2;
   const left = addPart("lateral", "lateral", [-sideX, 600, 75], [0, Math.PI/2, 0], [-180, 0, 0]);
-  const right = addPart("lateral", "lateral", [sideX, 600, 75], [0, Math.PI/2, 0], [180, 0, 0]);
-  sideMarks(left, data.pieces["lateral-izquierdo"], 1); sideMarks(right, data.pieces["lateral-derecho"], -1);
+  // El lateral derecho usa el registro opuesto: al girarlo -90° sus puntos de
+  // frente y fondo coinciden con las piezas transversales y quedan hacia adentro.
+  const right = addPart("lateral", "lateral", [sideX, 600, 75], [0, -Math.PI/2, 0], [180, 0, 0]);
+  sideMarks(left, data.pieces["lateral-izquierdo"], 1); sideMarks(right, data.pieces["lateral-derecho"], 1);
   const id = (x, y) => [x, y];
   for (let i=0; i<3; i++) {
     const base = addPart("base", "base", [0, data.assembly.baseCentersY[i], 65.75], [Math.PI/2, 0, 0], [0, (i-1)*90, 85], (x,y) => [x, 131.5-y]);
