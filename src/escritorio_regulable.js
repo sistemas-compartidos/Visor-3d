@@ -106,14 +106,16 @@ function startViewer() {
     }
   }
 
-  const back = addPart("fondo", boxGeometry(960, 420, T), [0, 650, -230.75], [0, 70, -190]);
+  // El fondo conserva el canto posterior recto, pero su cara de minifix mira
+  // hacia afuera. El giro no altera los tres encuentros laterales simétricos.
+  const back = addPart("fondo", boxGeometry(960, 420, T), [0, 650, -230.75], [0, 70, -190], [0, Math.PI, 0]);
   for (const y of [490,650,810]) { dot(back, -480, y-650, 0, 8, "x"); dot(back, 480, y-650, 0, 8, "x"); }
   for (const x of [-446,446]) for (const y of [-128,128]) dot(back, x, y, T/2+.9, 15);
   for (const x of [-430,-64,430,64]) dot(back, x, 210, 0, 8, "y");
 
   // Travesaño horizontal 960 x 150: su cara superior queda bajo la guía de
   // Y=480. Los agujeros de canto en Z=-183,25/-138,25 coinciden con el lateral.
-  const cross = addPart("travesano", boxGeometry(960, T, 150), [0, 449, -145.75], [0, -95, -145]);
+  const cross = addPart("travesano", boxGeometry(960, T, 150), [0, 449, -145.75], [0, -95, -145], [0, 0, Math.PI]);
   for (const [x,z] of [[-446,7.5],[0,-41],[398,-41],[446,7.5]]) dot(cross, x, T/2+.9, z, 15, "y");
   for (const x of [-430,-64,64,430]) dot(cross, x, 0, -75, 8, "z");
   for (const x of [-480,480]) {
