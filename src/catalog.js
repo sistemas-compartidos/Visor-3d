@@ -12,6 +12,7 @@ export const catalog = {
       "juguetero-x2-con-estante": { name: "Juguetero x2 con Estante", description: "Dos compartimentos y estante superior", status: "Borrador", title: "Juguetero x2 con Estante" },
       "librero-pared-emi": { name: "Librero Pared Emi", description: "Librero infantil de pared con tres niveles", status: "Borrador", title: "Librero Pared Emi" },
       "baul-emi": { name: "Baúl Emi", description: "Baúl infantil con tapa rebatible", status: "Disponible", title: "Baúl Emi" }
+      ,"escritorio-regulable": { name: "Escritorio Regulable", description: "Escritorio infantil con tapa de altura regulable", status: "Disponible", title: "Escritorio Regulable" }
     }
   }
 };
