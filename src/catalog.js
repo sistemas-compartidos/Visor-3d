@@ -13,6 +13,7 @@ export const catalog = {
       "librero-pared-emi": { name: "Librero Pared Emi", description: "Librero infantil de pared con tres niveles", status: "Borrador", title: "Librero Pared Emi" },
       "baul-emi": { name: "Baúl Emi", description: "Baúl infantil con tapa rebatible", status: "Disponible", title: "Baúl Emi" }
       ,"escritorio-regulable": { name: "Escritorio Regulable", description: "Escritorio infantil con tapa de altura regulable", status: "Disponible", title: "Escritorio Regulable" }
+      ,"esc-reg-caj-vert": { name: "Esc Reg Caj Vert", description: "Mueble regulable con dos cajones verticales", status: "Borrador", title: "Esc Reg Caj Vert" }
     }
   }
 };

@@ -7,4 +7,5 @@ else if (route.get('mueble') === 'juguetero-x2-con-estante') import('./juguetero
 else if (route.get('mueble') === 'librero-pared-emi') import('./librero_pared.js');
 else if (route.get('mueble') === 'baul-emi') import('./baul.js');
 else if (route.get('mueble') === 'escritorio-regulable') import('./escritorio_regulable.js');
+else if (route.get('mueble') === 'esc-reg-caj-vert') import('./esc_reg_caj_vert.js');
 else import('./mesa.js');
