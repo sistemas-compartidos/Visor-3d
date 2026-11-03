@@ -51,12 +51,26 @@ function startViewer() {
   const ground = new THREE.Mesh(new THREE.PlaneGeometry(20, 18), new THREE.MeshStandardMaterial({ color: VIEWER_COLORS.floor, roughness: 1 })); ground.rotation.x = -Math.PI / 2; ground.receiveShadow = true; scene.add(ground);
   let active = route.get("pieza") || "lateral", amount = 0, targetAmount = 0; const drawerAmount = [0, 0], drawerTarget = [0, 0]; if (!pieces[active]) active = "lateral"; select.value = active;
   const drawerControls = document.createElement("div"); drawerControls.className = "drawer-toggle-panel"; const drawerButtons = ["inferior", "superior"].map((label, index) => { const b = document.createElement("button"); b.type = "button"; b.className = "drawer-toggle"; b.textContent = `Abrir cajón ${label}`; b.setAttribute("aria-pressed", "false"); b.onclick = () => { drawerTarget[index] = drawerTarget[index] ? 0 : 1; b.textContent = `${drawerTarget[index] ? "Cerrar" : "Abrir"} cajón ${label}`; b.setAttribute("aria-pressed", String(Boolean(drawerTarget[index]))); }; drawerControls.append(b); return b; }); document.querySelector(".stage").append(drawerControls);
+  const explodeStep = document.createElement("div"); explodeStep.className = "explode-step"; explodeStep.textContent = "Mueble armado"; document.querySelector(".assembly-controls").append(explodeStep);
   const smooth = (from, to, value) => { const t = THREE.MathUtils.clamp((value - from) / (to - from), 0, 1); return t * t * (3 - 2 * t); };
   function refresh() { for (const item of parts) item.mesh.material = item.type === active ? selected : wood; for (const m of markers) m.visible = amount > .001 || m.userData.visibleAssembled; }
-  function update() { const eased = 1 - Math.pow(1 - amount, 2), forcedOpen = smooth(0, .18, amount); for (const { group } of parts) { const d = group.userData, opening = d.drawer >= 0 ? Math.max(drawerAmount[d.drawer], forcedOpen) : 0; group.position.copy(d.base).addScaledVector(d.open, opening).addScaledVector(d.explode, eased); } refresh(); }
+  function update() {
+    const drawerOut = [smooth(0, .16, amount), smooth(.08, .24, amount)];
+    const drawerSplit = [smooth(.22, .48, amount), smooth(.42, .68, amount)];
+    const bodySplit = smooth(.66, 1, amount);
+    for (const { group } of parts) {
+      const d = group.userData;
+      if (d.drawer >= 0) {
+        const opening = Math.max(drawerAmount[d.drawer], drawerOut[d.drawer]);
+        group.position.copy(d.base).addScaledVector(d.open, opening).addScaledVector(d.explode, drawerSplit[d.drawer]);
+      } else group.position.copy(d.base).addScaledVector(d.explode, bodySplit);
+    }
+    explodeStep.textContent = amount < .015 ? "Mueble armado" : amount < .22 ? "1 · Extraer los cajones" : amount < .42 ? "2 · Desarmar el cajón inferior" : amount < .66 ? "3 · Desarmar el cajón superior" : amount < .985 ? "4 · Separar la estructura" : "Despiece completo";
+    refresh();
+  }
   select.onchange = () => { active = select.value; refresh(); const url = new URL(location.href); url.searchParams.set("cliente", "picky-kids"); url.searchParams.set("mueble", slug); url.searchParams.set("pieza", active); history.replaceState({}, "", url); };
   const slider = document.getElementById("explode"), button = document.getElementById("explodeButton"); slider.value = "0"; function explode(value) { targetAmount = value; drawerControls.hidden = value > .001; button.textContent = value === 1 ? "Ver armado completo" : "Ver despiece completo"; } slider.oninput = () => explode(Number(slider.value) / 100); button.onclick = () => { slider.value = slider.value === "100" ? "0" : "100"; explode(Number(slider.value) / 100); };
-  camera.position.set(13.5, 10.5, 18); controls.target.set(0, 4.3, 0); controls.minDistance = 5; controls.maxDistance = 105; function resize() { renderer.setSize(canvas.clientWidth, canvas.clientHeight, false); framing.resize(); } new ResizeObserver(resize).observe(canvas); resize(); const clock = new THREE.Clock(); function animate() { requestAnimationFrame(animate); const dt = Math.min(clock.getDelta(), .05), speed = 1 - Math.exp(-dt * 6); amount = THREE.MathUtils.lerp(amount, targetAmount, speed); for (let i = 0; i < 2; i++) drawerAmount[i] = THREE.MathUtils.lerp(drawerAmount[i], drawerTarget[i], speed); update(); controls.update(); renderer.render(scene, camera); } animate(); document.getElementById("loading").classList.add("ready");
+  camera.position.set(13.5, 10.5, 18); controls.target.set(0, 4.3, 0); controls.minDistance = 5; controls.maxDistance = 105; function resize() { renderer.setSize(canvas.clientWidth, canvas.clientHeight, false); framing.resize(); } new ResizeObserver(resize).observe(canvas); resize(); const clock = new THREE.Clock(); function animate() { requestAnimationFrame(animate); const dt = Math.min(clock.getDelta(), .05), drawerSpeed = 1 - Math.exp(-dt * 6), step = dt * .4; amount += THREE.MathUtils.clamp(targetAmount - amount, -step, step); for (let i = 0; i < 2; i++) drawerAmount[i] = THREE.MathUtils.lerp(drawerAmount[i], drawerTarget[i], drawerSpeed); update(); controls.update(); renderer.render(scene, camera); } animate(); document.getElementById("loading").classList.add("ready");
 }
 
 if (route.has("mueble") || route.has("pieza") || route.has("p")) startViewer(); else showCatalog();

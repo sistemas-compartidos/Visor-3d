@@ -41,6 +41,7 @@ body { margin: 0; min-width: 320px; background: radial-gradient(circle at 50% 0,
 .lid-toggle { position: absolute; top: 14px; right: 14px; z-index: 2; width: auto; margin: 0; padding: 10px 14px; background: #183126; box-shadow: 0 4px 16px rgba(0,0,0,.17); }
 .drawer-toggle-panel { position: absolute; top: 14px; right: 14px; z-index: 2; display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
 .drawer-toggle { width: auto; margin: 0; padding: 9px 13px; background: #183126; box-shadow: 0 4px 16px rgba(0,0,0,.17); }
+.explode-step { margin-top: 9px; color: #183126; font-size: 12px; font-weight: 900; text-align: center; letter-spacing: .02em; }
 .controls { display: grid; gap: 15px; margin-top: 12px; border: 1px solid #dae0dc; border-radius: 18px; padding: 15px; background: rgba(255,253,248,.96); box-shadow: 0 8px 25px rgba(24,49,38,.07); }
 .assembly-controls { padding-bottom: 14px; border-bottom: 1px solid #dce2de; }
 .controls label { display: block; margin-bottom: 6px; color: #627169; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; }
@@ -52,4 +53,4 @@ button { width: 100%; margin-top: 10px; border: 0; border-radius: 11px; padding:
 .legend span { display:flex; align-items:center; gap:5px; }
 .legend i { width:9px; height:9px; border-radius:50%; display:inline-block; }
 .dowel-dot { background:#36a5cf; }.hardware-dot { background:#26322e; }
-@media (min-width: 760px) { .catalog-shell, .app-shell { padding-top: 26px; } .stage { min-height: 540px; } .assembly-controls { display: grid; grid-template-columns: minmax(0,1fr) auto; column-gap: 18px; align-items: center; } .assembly-controls .explode-row, .assembly-controls .legend { grid-column: 1; } .assembly-controls button { grid-column: 2; grid-row: 1 / span 2; width: auto; min-width: 210px; margin: 0; } }
+@media (min-width: 760px) { .catalog-shell, .app-shell { padding-top: 26px; } .stage { min-height: 540px; } .assembly-controls { display: grid; grid-template-columns: minmax(0,1fr) auto; column-gap: 18px; align-items: center; } .assembly-controls .explode-row, .assembly-controls .legend, .assembly-controls .explode-step { grid-column: 1; } .assembly-controls .explode-step { margin-top: 4px; text-align: left; } .assembly-controls button { grid-column: 2; grid-row: 1 / span 3; width: auto; min-width: 210px; margin: 0; } }
