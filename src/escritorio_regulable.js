@@ -55,10 +55,17 @@ function startViewer() {
   const root = new THREE.Group(); root.scale.setScalar(.01); root.position.y = -.02; scene.add(root);
   const parts = [], markers = [];
 
-  function sideGeometry() {
+  function sideGeometry(curveAtLeft = false) {
     const s = new THREE.Shape();
-    s.moveTo(-240, -430); s.lineTo(240, -430); s.lineTo(240, 405);
-    s.quadraticCurveTo(240, 430, 215, 430); s.lineTo(-240, 430); s.closePath();
+    s.moveTo(-240, -430); s.lineTo(240, -430);
+    if (curveAtLeft) {
+      s.lineTo(240, 430); s.lineTo(-215, 430);
+      s.quadraticCurveTo(-240, 430, -240, 405); s.lineTo(-240, -430);
+    } else {
+      s.lineTo(240, 405); s.quadraticCurveTo(240, 430, 215, 430);
+      s.lineTo(-240, 430); s.lineTo(-240, -430);
+    }
+    s.closePath();
     const g = new THREE.ExtrudeGeometry(s, { depth: T, bevelEnabled: false, curveSegments: 12 });
     g.translate(0, 0, -T/2); g.computeVertexNormals(); return g;
   }
@@ -79,14 +86,24 @@ function startViewer() {
   }
 
   const sideX = 480 + T/2;
-  const left = addPart("lateral", sideGeometry(), [-sideX, 430, 0], [-190, 0, 0], [0, Math.PI/2, 0]);
+  // Ambos perfiles tienen la curva hacia el frente (+Z). El izquierdo debe
+  // espejarse antes de girarlo para que no quede mirando hacia el fondo.
+  const left = addPart("lateral", sideGeometry(true), [-sideX, 430, 0], [-190, 0, 0], [0, Math.PI/2, 0]);
   const right = addPart("lateral", sideGeometry(), [sideX, 430, 0], [190, 0, 0], [0, -Math.PI/2, 0]);
   const railHeights = [480, 540, 600, 660, 720, 780];
-  const railZ = 31.5;
+  const railZ = -31.5;
+  const sideLocalX = (side, worldZ) => side === left ? -worldZ : worldZ;
   for (const side of [left, right]) {
-    const inner = side === left ? T/2 + .9 : -(T/2 + .9);
-    for (const y of railHeights) for (const z of [-63.5, 126.5]) dot(side, z, y-430, inner, 6);
-    for (const [y,z,d] of [[490,230.75,8],[650,230.75,8],[810,230.75,8],[449,183.25,8],[449,138.25,5]]) dot(side, z, y-430, inner, d);
+    // Tras ambos giros, +Z local es siempre la cara interior del lateral.
+    const inner = T/2 + .9;
+    for (const y of railHeights) for (const worldZ of [-126.5, 63.5]) {
+      dot(side, sideLocalX(side, worldZ), y-430, inner, 6);
+    }
+    // Fondo en el canto posterior recto y travesaño horizontal bajo la guía inferior.
+    for (const [y,worldZ,d] of [[490,-230.75,8],[650,-230.75,8],[810,-230.75,8],
+                                [449,-183.25,8],[449,-138.25,5]]) {
+      dot(side, sideLocalX(side, worldZ), y-430, inner, d);
+    }
   }
 
   const back = addPart("fondo", boxGeometry(960, 420, T), [0, 650, -230.75], [0, 70, -190]);
@@ -94,13 +111,18 @@ function startViewer() {
   for (const x of [-446,446]) for (const y of [-128,128]) dot(back, x, y, T/2+.9, 15);
   for (const x of [-430,-64,430,64]) dot(back, x, 210, 0, 8, "y");
 
-  // El eje del travesaño coincide con el mecanizado Y=449 de los laterales.
-  const cross = addPart("travesano", boxGeometry(960, 150, T), [0, 449, 165], [0, -95, 175]);
-  for (const x of [-446,446,0]) dot(cross, x, -41, T/2+.9, 15);
-  for (const x of [-430,-64,430,64]) dot(cross, x, -75, 0, 8, "y");
-  dot(cross, -480, -37.5, 0, 8, "x"); dot(cross, 480, -37.5, 0, 8, "x");
+  // Travesaño horizontal 960 x 150: su cara superior queda bajo la guía de
+  // Y=480. Los agujeros de canto en Z=-183,25/-138,25 coinciden con el lateral.
+  const cross = addPart("travesano", boxGeometry(960, T, 150), [0, 449, -145.75], [0, -95, -145]);
+  for (const [x,z] of [[-446,7.5],[0,-41],[398,-41],[446,7.5]]) dot(cross, x, T/2+.9, z, 15, "y");
+  for (const x of [-430,-64,64,430]) dot(cross, x, 0, -75, 8, "z");
+  for (const x of [-480,480]) {
+    dot(cross, x, 0, -37.5, 8, "x");
+    dot(cross, x, 0, 7.5, 5, "x");
+  }
 
-  const top = addPart("tapa", boxGeometry(955, T, 400), [0, 609.25, railZ], [0, 145, 105]);
+  // La tapa está apoyada sobre la guía intermedia de Y=600, no atravesándola.
+  const top = addPart("tapa", boxGeometry(955, T, 400), [0, 629.25, railZ], [0, 145, 105]);
 
   for (const x of [-470.75, 470.75]) for (let i=0; i<6; i++) {
     const y = railHeights[i], dz = i < 3 ? -55 : 55;
