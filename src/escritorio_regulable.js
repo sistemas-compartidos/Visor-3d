@@ -78,11 +78,14 @@ function startViewer() {
     group.userData = { base: new THREE.Vector3(...pos), explode: new THREE.Vector3(...explode), partType: type };
     root.add(group); parts.push({ group, mesh, type }); return group;
   }
-  function dot(parent, x, y, z, diameter = 8, axis = "z") {
+  // Los puntos interiores se muestran al abrir el despiece. Los que quedan
+  // accesibles desde afuera (o desde abajo) deben seguir visibles armado.
+  function dot(parent, x, y, z, diameter = 8, axis = "z", visibleAssembled = false) {
     const mat = diameter <= 8 ? dowel : hardware;
     const m = new THREE.Mesh(new THREE.CylinderGeometry(Math.max(diameter/2, 2.8), Math.max(diameter/2, 2.8), 2.2, 20), mat);
     m.position.set(x, y, z); if (axis === "z") m.rotation.x = Math.PI/2; if (axis === "x") m.rotation.z = Math.PI/2;
-    m.visible = false; m.userData.partType = parent.userData.partType; parent.add(m); markers.push(m);
+    m.visible = false; m.userData.partType = parent.userData.partType;
+    m.userData.visibleAssembled = visibleAssembled; parent.add(m); markers.push(m);
   }
 
   const sideX = 480 + T/2;
@@ -110,13 +113,13 @@ function startViewer() {
   // hacia afuera. El giro no altera los tres encuentros laterales simétricos.
   const back = addPart("fondo", boxGeometry(960, 420, T), [0, 650, -230.75], [0, 70, -190], [0, Math.PI, 0]);
   for (const y of [490,650,810]) { dot(back, -480, y-650, 0, 8, "x"); dot(back, 480, y-650, 0, 8, "x"); }
-  for (const x of [-446,446]) for (const y of [-128,128]) dot(back, x, y, T/2+.9, 15);
+  for (const x of [-446,446]) for (const y of [-128,128]) dot(back, x, y, T/2+.9, 15, "z", true);
   for (const x of [-430,-64,430,64]) dot(back, x, 210, 0, 8, "y");
 
   // Travesaño horizontal 960 x 150: su cara superior queda bajo la guía de
   // Y=480. Los agujeros de canto en Z=-183,25/-138,25 coinciden con el lateral.
   const cross = addPart("travesano", boxGeometry(960, T, 150), [0, 449, -145.75], [0, -95, -145], [0, 0, Math.PI]);
-  for (const [x,z] of [[-446,7.5],[0,-41],[398,-41],[446,7.5]]) dot(cross, x, T/2+.9, z, 15, "y");
+  for (const [x,z] of [[-446,7.5],[0,-41],[398,-41],[446,7.5]]) dot(cross, x, T/2+.9, z, 15, "y", true);
   for (const x of [-430,-64,64,430]) dot(cross, x, 0, -75, 8, "z");
   for (const x of [-480,480]) {
     dot(cross, x, 0, -37.5, 8, "x");
@@ -136,7 +139,7 @@ function startViewer() {
   const ground = new THREE.Mesh(new THREE.PlaneGeometry(20, 18), new THREE.MeshStandardMaterial({ color: VIEWER_COLORS.floor, roughness: 1 }));
   ground.rotation.x = -Math.PI/2; ground.receiveShadow = true; scene.add(ground);
   let active = route.get("pieza") || "lateral", amount = 0; if (!pieces[active]) active = "lateral"; select.value = active;
-  function refresh() { for (const item of parts) item.mesh.material = item.type === active ? selected : wood; for (const m of markers) m.visible = amount > .001; }
+  function refresh() { for (const item of parts) item.mesh.material = item.type === active ? selected : wood; for (const m of markers) m.visible = amount > .001 || m.userData.visibleAssembled; }
   function explode(value) { amount = value; const eased = 1-Math.pow(1-value, 2); for (const { group } of parts) group.position.copy(group.userData.base).addScaledVector(group.userData.explode, eased); refresh(); }
   select.onchange = () => { active = select.value; refresh(); const url = new URL(location.href); url.searchParams.set("cliente", "picky-kids"); url.searchParams.set("mueble", slug); url.searchParams.set("pieza", active); history.replaceState({}, "", url); };
   const slider = document.getElementById("explode"), button = document.getElementById("explodeButton"); slider.value = "0";
