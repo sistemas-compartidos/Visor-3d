@@ -14,6 +14,7 @@ export const catalog = {
       "baul-emi": { name: "Baúl Emi", description: "Baúl infantil con tapa rebatible", status: "Disponible", title: "Baúl Emi" }
       ,"escritorio-regulable": { name: "Escritorio Regulable", description: "Escritorio infantil con tapa de altura regulable", status: "Disponible", title: "Escritorio Regulable" }
       ,"esc-reg-caj-vert": { name: "Esc Reg Caj Vert", description: "Mueble regulable con dos cajones verticales", status: "Borrador", title: "Esc Reg Caj Vert" }
+      ,"esc-reg-caj-horiz": { name: "Esc Reg Caj Horiz", description: "Escritorio regulable con dos cajones horizontales", status: "Borrador", title: "Esc Reg Caj Horiz" }
     }
   }
 };
