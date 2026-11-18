@@ -15,6 +15,7 @@ export const catalog = {
       ,"escritorio-regulable": { name: "Escritorio Regulable", description: "Escritorio infantil con tapa de altura regulable", status: "Disponible", title: "Escritorio Regulable" }
       ,"esc-reg-caj-vert": { name: "Esc Reg Caj Vert", description: "Mueble regulable con dos cajones verticales", status: "Borrador", title: "Esc Reg Caj Vert" }
       ,"esc-reg-caj-horiz": { name: "Esc Reg Caj Horiz", description: "Escritorio regulable con dos cajones horizontales", status: "Borrador", title: "Esc Reg Caj Horiz" }
+      ,"esc-reg-librero": { name: "Esc Reg Librero", description: "Librero angosto de tres niveles", status: "Disponible", title: "Esc Reg Librero" }
     }
   }
 };
